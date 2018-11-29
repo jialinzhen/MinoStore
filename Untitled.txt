@@ -1,0 +1,10 @@
+1. npm install --save redux react-redux
+2. reducer.js && action.js in new store folder
+3. import {Provider} from 'react-redux' and wrap <Provider store={store}></Provider>
+	in index.js as outermost layer
+4. import {createStore} from 'redux'
+5. import reducer from your files
+6. const store = createStore(reducer);
+7. In reducer, the action.varibleName refer to the variable passed into from
+	the dispatch method(component -> action -> reducer)
+8. For asynchronous code, install && import redux-thunk

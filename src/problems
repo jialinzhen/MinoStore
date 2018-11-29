@@ -1,0 +1,20 @@
+1. Disable add to Cart -> cannot disable as adding a state variable will disable 
+   "Add to Cart" for all goods.
+Solution: All of your goods are handled by a single Goods component, try to have
+          a modal that will always show up and prevent you from adding to the cart
+          if GoodQuantity = 0, <modal show={true}/> will appear on the page rather
+          than disable a particular button, also GoodQuantity-- will not get
+          executed 
+2. When page refreshed, "Current Avaliable Quantity" set back to database setting
+Solution: when page refreshed, you are fetching data from the database and reset your
+          UI, you have to update your database "registerInfo.json" when you finish 
+          adding item to cart
+3. When click on one item on a cart, all same items disappeared
+Solution: 1) Have same item only appear once and increment the count, when count = 0,
+             remove the item.
+          2) change the id everytime you add the same item, (maybe doable)
+
+Once problem done:
+1) Add styling to details page
+2) redux + authentication
+3) personal user page

@@ -1,0 +1,15 @@
+1. npm install --save react-router-dom
+2. import {BrowserRouter} from RRD and wrap it with index.js or app.js
+3. Direct Routing: Import { Route } and set <Route path="..." component={...} >
+4. Direct Linking: Import Link/NavLink(for accessing its 'active' class for CSS styling)
+   from RRD and wrap element to provide links
+    <Link to="/component">
+        <SomeComponent />
+    </Link>
+5. use Switch to make sure only one page is rendered (prevent multi-page-routing
+   due to prefix)
+6. Dynamic Routing: Let say we have <Route '/someComponent/:compid' component={SomeComp}/>
+   In SomeComp, we can access the id using this.props.match.params.compid,
+   if we have multiple SomeComp that have different id and content, we can
+   access the content by setting search="?content=" + comComp.content on Link to the one
+   SomeComp, then run search param on the SomeComp page and render it dynamically

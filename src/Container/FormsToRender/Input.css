@@ -1,0 +1,15 @@
+.Input {
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-control {
+    margin: auto;
+    width: 50%
+}
+
+.error {
+    color: red;
+    padding-left: 289px;
+}

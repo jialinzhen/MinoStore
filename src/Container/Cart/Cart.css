@@ -1,0 +1,12 @@
+.row {
+    border: 1px solid gray transparent;
+    margin-top: 10px; 
+}
+
+.scroll-auto {
+    overflow: auto;
+}
+
+.fixedHeight {
+    height: 500px;
+}
